@@ -1,0 +1,6 @@
+FROM scratch
+ADD files/alpine-minirootfs-3.14.2-aarch64.tar.gz /
+
+FROM php:7.4-apache  
+COPY . /var/www/html
+EXPOSE 80
